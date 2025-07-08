@@ -1,32 +1,22 @@
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.gallery img {
-  width: 150px;
-  height: 100px;
-  object-fit: cover;
+.galeria-img {
+  border-radius: 0px;
   cursor: pointer;
-  border-radius: 5px;
-  transition: transform 0.2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-height: 200px;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.gallery img:hover {
+.galeria-img:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.modal-body img {
-  max-width: 100%;
-  border-radius: 10px;
-}
 
-.modal-backdrop {
-  z-index: 1055 !important;
+.imagem-modal {
+  max-height: 80vh;         /* Limita altura a 80% da viewport */
+  width: auto;              /* Largura automática conforme proporção */
+  object-fit: contain;      /* Mantém a imagem inteira visível */
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
-
-.modal {
-  z-index: 1060 !important;
-}
-

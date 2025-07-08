@@ -1,27 +1,30 @@
-<div class="container">
-    <h1 class="text-center">
-        Estrutura Física
-    </h1>
-    <h3 class="text-center mt-3">Conheça a Hs Medical Vida Por dentro</h3>
-    <br>
-    <div class="gallery ">
+<div class="container py-5">
+  <h2 class="text-center mb-4">Galeria de Fotos</h2>
+
+  <div class="row justify-content-center">
+    <div
+      class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4 d-flex justify-content-center"
+      *ngFor="let img of imagens">
       <img
-        *ngFor="let img of imagens"
         [src]="img"
-        (click)="openModal(modalTemplate, img)" />
+        alt="Foto"
+        class="img-fluid galeria-img"
+        (click)="abrirModal(template, img)" />
     </div>
-</div>
- 
-<ng-template #modalTemplate #template>
+  </div>
+
+  <!-- Modal com ngx-bootstrap -->
+ <ng-template #template>
   <div class="modal-header">
-    <h4 class="modal-title">Foto em destaque</h4>
-    <button
-      type="button"
-      class="btn-close"
-      aria-label="Fechar"
-      (click)="modalRef?.hide()"></button>
-      </div>
+    <h5 class="modal-title">Foto em Destaque</h5>
+    <button type="button" class="btn-close" aria-label="Fechar" (click)="fecharModal()"></button>
+  </div>
   <div class="modal-body text-center">
-    <img [src]="imagemSelecionada" class="img-fluid" />
+    <img
+      [src]="imagemSelecionada"
+      alt="Imagem em destaque"
+      class="img-fluid imagem-modal" />
   </div>
 </ng-template>
+
+</div>
