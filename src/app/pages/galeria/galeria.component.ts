@@ -26,7 +26,10 @@ export class GaleriaComponent {
     'assets/img/img/12.jpg',
     'assets/img/img/13.jpg',
     'assets/img/img/14.jpg',
-    'assets/img/img/15.jpg'
+    'assets/img/img/15.jpg',
+    'assets/img/img/16.jpg',
+    'assets/img/img/17.jpg',
+    'assets/img/img/3.jpg'
   ];
 
   imagemSelecionada: string = '';
